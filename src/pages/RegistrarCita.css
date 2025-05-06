@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  .contenedor-reserva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    justify-content: center;
+  }
+  
+  .logo-reserva {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .formulario input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+  
+  .formulario button {
+    padding: 0.75rem;
+    background-color: #d32f2f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .formulario button:hover {
+    background-color: #b71c1c;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #bbb;
+  }

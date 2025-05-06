@@ -1,0 +1,17 @@
+.corte {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 10px;
+    width: 180px;
+    transition: transform 0.2s;
+  }
+  
+  .corte img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .corte:hover {
+    transform: scale(1.05);
+  }
+  
