@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./PanelAdmin.css"
 function PanelAdmin(){
     return(
@@ -9,7 +10,7 @@ function PanelAdmin(){
       </header>
 
       <section className="admin-opciones">
-        <button className="admin-btn">Ver Citas</button>
+        <Link to="/Panel/citas" className="admin-btn">Ver Citas</Link>
         <button className="admin-btn">Gestionar Usuarios</button>
         <button className="admin-btn">Configuraciones</button>
       </section>
