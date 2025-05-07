@@ -24,7 +24,7 @@ function Login(){
         if (userFound.rol === "admin") {
           navigate("/panel");
         } else {
-          navigate("/cliente");
+          navigate("/perfil");
         }
       } else {
         alert("Usuario o contraseña incorrectos");
