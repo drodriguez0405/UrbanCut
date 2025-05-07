@@ -1,40 +1,116 @@
 .confirmacion-container {
-    padding: 2rem;
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #f2f2f2;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: #2a2a2a; /* Fondo oscuro para la confirmación */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-top: 4px solid #4CAF50;
+  color: white;
+}
+
+.confirmacion-container.error {
+  border-top-color: #f39c12;
+}
+
+.confirmacion-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.confirmacion-header h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.confirmacion-icono {
+  font-size: 4rem;
+  color: #4CAF50;
+  margin: 1rem auto;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.confirmacion-datos {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.dato-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #444;
+}
+
+.dato-item:last-child {
+  border-bottom: none;
+}
+
+.dato-item span {
+  color: #bbb;
+}
+
+.dato-item strong {
+  color: white;
+}
+
+.confirmacion-acciones {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-volver, .btn-nueva-reserva {
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-volver {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.btn-volver:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+}
+
+.btn-nueva-reserva {
+  background-color: transparent;
+  color: #d32f2f;
+  border: 2px solid #d32f2f;
+}
+
+.btn-nueva-reserva:hover {
+  background-color: rgba(211, 47, 47, 0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .confirmacion-container {
+      padding: 2rem 1.5rem;
+      margin: 1rem;
   }
   
-  .confirmacion-datos {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-top: 1.5rem;
+  .confirmacion-acciones {
+      flex-direction: column;
   }
   
-  .btn-dato {
-    background-color: #fff;
-    border: 2px solid #000;
-    border-radius: 8px;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
-    cursor: default;
+  .btn-volver, .btn-nueva-reserva {
+      width: 100%;
   }
-  
-  .btn-volver {
-    margin-top: 2rem;
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 0.7rem 1.5rem;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-volver:hover {
-    background-color: #333;
-  }
+}

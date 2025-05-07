@@ -1,35 +1,110 @@
+/* PerfilCliente.css */
 .perfil-container {
-    padding: 2rem;
-    max-width: 600px;
-    margin: auto;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.perfil-container h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #d32f2f;
+  padding-bottom: 0.5rem;
+}
+
+.perfil-container h3 {
+  font-size: 1.4rem;
+  color: white;
+  margin: 1.5rem 0 1rem;
+}
+
+.perfil-container p {
+  font-size: 1rem;
+  color: #ddd;
+  margin: 0.5rem 0;
+}
+
+.citas-lista {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.cita-item {
+  border-left: 4px solid #d32f2f;
+  margin-bottom: 1rem;
+  padding: 1.2rem;
+  border-radius: 0 8px 8px 0;
+  background-color: #1c1c1c;
+  transition: all 0.3s ease;
+}
+
+.cita-item:hover {
+  transform: translateX(5px);
+}
+
+.cita-item p {
+  margin: 0.4rem 0;
+  color: #eee;
+}
+
+.cita-item p:first-child {
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.btn-cerrar-sesion {
+  font-family: Arial, sans-serif;
+  margin-top: 2rem;
+  padding: 0.8rem;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+.btn-cerrar-sesion:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensaje cuando no hay citas */
+.perfil-container > p {
+  text-align: center;
+  color: #bbb;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .perfil-container {
+      padding: 1.5rem;
+      margin: 1rem;
   }
   
-  .citas-lista {
-    list-style: none;
-    padding: 0;
+  .perfil-container h2 {
+      font-size: 1.5rem;
   }
   
-  .cita-item {
-    border: 1px solid #ccc;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+  .perfil-container h3 {
+      font-size: 1.2rem;
   }
-  
-  .btn-cerrar-sesion {
-    margin-top: 2rem;
-    padding: 0.5rem 1.5rem;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  .btn-cerrar-sesion:hover {
-    background-color: #c0392b;
-  }
+}

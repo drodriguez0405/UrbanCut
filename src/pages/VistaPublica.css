@@ -1,71 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
 .inicio-container {
-  background-image: url('../../public/img/FondoUrbanCut.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../public/img/FondoUrbanCut.png') center/cover no-repeat fixed;
   color: white;
   text-align: center;
   font-family: 'Arial', sans-serif;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  padding: 20px;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
 
 .inicio-contenido {
-  position: relative;
-  z-index: 1;
+  max-width: 800px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding: 2rem;
-  animation: fadeIn 1.5s ease-in-out;
+  gap: 2vh; 
+  animation: fadeIn 1s ease-out;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
-.inicio-contenido h1 {
-  font-size: 2.5rem;
-  max-width: 800px;
+
+.logo {
+  width: min(200px, 30vw); 
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  margin-bottom: 1vh;
 }
+
+
+.inicio-contenido h1 {
+  font-size: min(2.2rem, 5vw);
+  line-height: 1.3;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  margin: 0;
+  padding: 0 10px; 
+}
+
 
 .botones {
   display: flex;
-  gap: 1rem;
+  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2vh;
 }
 
-.btn-reserva {
-  background: transparent;
+
+.btn-reserva, .btn-perfil {
+  padding: 12px 30px;
   border: 2px solid white;
-  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
   color: white;
-  cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s ease, transform 0.3s ease;
-  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  background: transparent;
 }
 
-.btn-reserva:hover{
+
+.btn-reserva:hover, .btn-perfil:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-reserva:hover {
   background: white;
-  color: black;
-  transform: scale(1.05);
+  color: #222;
 }
 
-.logo {
-  width: 200px;
-  margin-bottom: 1rem;
+.btn-perfil:hover {
+  background: rgba(255,255,255,0.9);
+  color: #222;
 }
 
-/* Animación simple */
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 600px) {
+  .inicio-contenido {
+    gap: 3vh;
+  }
+  
+  .inicio-contenido h1 {
+    font-size: 1.5rem;
+  }
+  
+  .botones {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn-reserva, .btn-perfil {
+    width: 100%;
+    max-width: none;
+    padding: 10px 20px;
+  }
 }

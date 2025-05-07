@@ -1,47 +1,93 @@
+/* Login.css */
 .login-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0a0a0a;
-  }
-  
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+              url('../../public/img/FondoUrbanCut.png') center/cover no-repeat fixed;
+  padding: 1rem;
+}
+
+.login-card {
+  background-color: #2a2a2a;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  border-top: 4px solid #d32f2f;
+}
+
+.login-card h2 {
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login-card input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #1c1c1c;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2);
+}
+
+.login-card input::placeholder {
+  color: #888;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #d32f2f;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.login-card button:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
   .login-card {
-    background-color: #fff;
-    padding: 2rem 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    text-align: center;
-    width: 300px;
+      padding: 2rem 1.5rem;
   }
   
   .login-card h2 {
-    margin-bottom: 1.5rem;
-    font-size: 1.6rem;
-    color: #222;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
   }
   
   .login-card input {
-    width: 100%;
-    padding: 0.7rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
+      padding: 0.8rem;
   }
   
   .login-card button {
-    width: 100%;
-    padding: 0.7rem;
-    background-color: #222;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+      padding: 0.8rem;
   }
-  
-  .login-card button:hover {
-    background-color: #444;
-  }
+}

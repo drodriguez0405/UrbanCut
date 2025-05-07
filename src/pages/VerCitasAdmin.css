@@ -1,36 +1,92 @@
 .ver-citas-container {
-    padding: 2rem;
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    min-height: 100vh;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+  min-height: 100vh;
+  color: white;
+}
+
+.ver-citas-container h2 {
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #d32f2f;
+  padding-bottom: 0.5rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ver-citas-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(42, 42, 42, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ver-citas-table th,
+.ver-citas-table td {
+  border: 1px solid #444;
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+}
+
+.ver-citas-table th {
+  background-color: #d32f2f;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.ver-citas-table tr:nth-child(even) {
+  background-color: rgba(60, 60, 60, 0.5);
+}
+
+.ver-citas-table tr:hover {
+  background-color: rgba(211, 47, 47, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ver-citas-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .ver-citas-container {
+      padding: 1.5rem;
   }
   
   .ver-citas-container h2 {
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
-  
-  .ver-citas-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      font-size: 1.5rem;
   }
   
   .ver-citas-table th,
   .ver-citas-table td {
-    border: 1px solid #ccc;
-    padding: 0.75rem 1rem;
-    text-align: left;
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ver-citas-container h2 {
+      font-size: 1.3rem;
   }
   
-  .ver-citas-table th {
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+  .ver-citas-table th,
+  .ver-citas-table td {
+      padding: 0.6rem 0.8rem;
+      font-size: 0.8rem;
   }
-  
-  .ver-citas-table tr:nth-child(even) {
-    background-color: #f0f0f0;
-  }
+}

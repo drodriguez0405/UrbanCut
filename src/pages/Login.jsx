@@ -10,7 +10,10 @@ function Login(){
   useEffect(() => {
     fetch("https://urbancut.onrender.com/usuarios")
       .then((res) => res.json())
-      .then((data) => setUsuarios(data))
+      .then((data) => {
+        console.log("Usuarios obtenidos:", data);
+        setUsuarios(data);
+      })
       .catch((err) => console.error("Error al obtener usuarios", err));
   }, []);
   const iniciarSesion = () => {
@@ -18,8 +21,9 @@ function Login(){
       (u) => u.user === userInput && u.password === passwordInput
     );
     if (userFound) {
-        localStorage.setItem("usuario", JSON.stringify(userFound));
-        localStorage.setItem("token", "fake-token-123");
+      console.log("Usuario autenticado:", userFound); // 👀 MIRA ESTO
+      localStorage.setItem("usuario", JSON.stringify(userFound));
+      localStorage.setItem("token", "fake-token-123");  
   
         if (userFound.rol === "admin") {
           navigate("/panel");
