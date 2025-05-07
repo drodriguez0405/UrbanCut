@@ -8,7 +8,7 @@ function ConfirmacionReserva() {
 
   useEffect(() => {
     if (cita) {
-      // Guardar la cita en la base de datos (JSON Server)
+      
       fetch("https://urbancut.onrender.com/citas", {
         method: "POST",
         headers: {

@@ -54,7 +54,7 @@
   background-color: rgba(211, 47, 47, 0.1);
 }
 
-/* Responsive */
+
 @media (max-width: 1024px) {
   .ver-citas-table {
       display: block;

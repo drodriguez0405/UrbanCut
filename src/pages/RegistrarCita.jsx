@@ -44,7 +44,7 @@ function RegistrarCita() {
       return false;
     }
     
-    // Validar fecha futura
+    
     const fechaSeleccionada = new Date(formData.fecha);
     const hoy = new Date();
     hoy.setHours(0, 0, 0, 0);

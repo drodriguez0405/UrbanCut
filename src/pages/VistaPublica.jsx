@@ -12,7 +12,7 @@ function VistaPublica() {
     if (usuarioGuardado) {
       try {
         const usuarioParseado = JSON.parse(usuarioGuardado);
-        console.log("Usuario guardado:", usuarioParseado); // 🔍 Verifica aquí
+        console.log("Usuario guardado:", usuarioParseado); 
         setUsuario(usuarioParseado);
       } catch {
         setUsuario(null);

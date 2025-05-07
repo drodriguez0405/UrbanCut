@@ -21,7 +21,7 @@ function Login(){
       (u) => u.user === userInput && u.password === passwordInput
     );
     if (userFound) {
-      console.log("Usuario autenticado:", userFound); // 👀 MIRA ESTO
+      console.log("Usuario autenticado:", userFound); 
       localStorage.setItem("usuario", JSON.stringify(userFound));
       localStorage.setItem("token", "fake-token-123");  
   
